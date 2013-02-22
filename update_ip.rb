@@ -6,4 +6,4 @@ url = "http://10.0.1.1/"
 doc = Nokogiri::HTML(open(url))
 ip_info = doc.at_css("#ipinfo").text
 
-puts ip_info
+puts "%s %s" % [Time.now.to_s, ip_info]
